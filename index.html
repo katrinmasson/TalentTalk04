@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talent Talk</title>
+    <script src="https://github.com/typicode/lowdb/blob/main/src/node.ts"></script>
+    <script type="module" src="./bewerber.js" defer></script>
+    <script type="module" src="./firebase.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.11.2/cdn/themes/light.css" />
+    <link rel="stylesheet" href="generalStyle.css">
+</head>
+
+<body>
+
+    <div id="gridContainer">
+
+        <div id="header">
+            <sl-resize-observer>
+                <a href="startseite.html"><img id="logo" src="Bilder/Logo_TalentTalk2.png"></a>
+                <img id="profil" src="Bilder/profil.png">
+            </sl-resize-observer>
+        </div>
+
+        <div id="menu">
+            <sl-resize-observer>
+                <sl-button href="about.html" class="button" size="medium" pill>About</sl-button>
+                <sl-button href="bewerber.html" class="button" size="medium" pill>Bewerber</sl-button>
+                <sl-button href="fave.html" class="button" size="medium" pill>Favoriten</sl-button>
+                <sl-button href="termin.html" class="button" size="medium" pill>Termin</sl-button>
+            </sl-resize-observer>
+        </div>
+
+        <div id="pic">
+            <sl-resize-observer>
+                <a href="startseite.html">
+                    <div id="bewerberPic"><img id="bewerber" src=" Bilder/Bewerber1.png"></div>
+                </a>
+            </sl-resize-observer>
+        </div>
+
+        <div id="info1">
+            <sl-resize-observer>
+                <h1 id="name"></h1>
+                <img class="pics" src="Bilder/haus.png">
+                <p id="adresse">info</p>
+                <br>
+                <img class="pics" src="Bilder/eMail.png">
+                <p id="mail">info</p>
+                <br>
+                <img class="pics" src="Bilder/telefon.png">
+                <p id="telefon">info</p>
+                <sl-divider id="teiler" style="--width: 3px;"></sl-divider>
+            </sl-resize-observer>
+        </div>
+
+        <div id="info2">
+            <sl-resize-observer>
+                <h2>Geburtstag</h2>
+                <p id="geburtstag">Info</p>
+                <h2>Letzte akademische Ausbildung / Schulabschluss:</h2>
+                <p id="lastSchool">Info</p>
+                <h2>Letzte Arbeitsstelle:</h2>
+                <p id="lastPosition">Info</p>
+                <h2>Besondere Fähigkeiten/Qualifikationen:</h2>
+                <p id="specials">Info</p>
+                <h2>Referenzen:</h2>
+                <p id="references">Info</p>
+            </sl-resize-observer>
+        </div>
+
+        <div id="notes">
+            <sl-resize-observer>
+                <div id="noteBox">
+                    <p>Fähigkeiten:</p>
+                    <sl-rating class="stars, lock" id="star1" label="Rating" precision="0.5" value="0"></sl-rating>
+                    <p>Berufserfahrungen:</p>
+                    <sl-rating class="stars, lock" id="star2" label="Rating" precision="0.5" value="0"></sl-rating>
+                    <p>Softskills:</p>
+                    <sl-rating class="stars, lock" id="star3" label="Rating" precision="0.5" value="0"></sl-rating>
+                    <p>Mood:</p>
+                    <sl-radio-group id="mood" class="lock" name="a" value="neutral">
+                        <sl-radio-button value="angry">
+                            <sl-icon name="emoji-angry" label="Angry"></sl-icon>
+                        </sl-radio-button>
+
+                        <sl-radio-button value="sad">
+                            <sl-icon name="emoji-frown" label="Sad"></sl-icon>
+                        </sl-radio-button>
+
+                        <sl-radio-button value="neutral">
+                            <sl-icon name="emoji-neutral" label="Neutral"></sl-icon>
+                        </sl-radio-button>
+
+                        <sl-radio-button value="happy">
+                            <sl-icon name="emoji-smile" label="Happy"></sl-icon>
+                        </sl-radio-button>
+
+                        <sl-radio-button value="laughing">
+                            <sl-icon name="emoji-laughing" label="Laughing"></sl-icon>
+                        </sl-radio-button>
+                    </sl-radio-group>
+                    <p>Notizen:</p>
+                    <sl-textarea id="textInput" class="lock" size="medium"></sl-textarea>
+                    <sl-button id="noteButton" size="small" pill>Bearbeiten</sl-button>
+                </div>
+            </sl-resize-observer>
+        </div>
+
+        <div id="end">
+            <sl-button id="fave" size="medium" pill>Favorisieren</sl-button>
+        </div>
+
+    </div>
+
+    <script type="module"
+        src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.11.2/cdn/shoelace-autoloader.js"></script>
+</body>
+
+</html>

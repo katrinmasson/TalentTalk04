@@ -1,0 +1,344 @@
+:root {
+    --mainBGColor: rgb(202, 202, 202);
+    --1BGColor: #58565D;
+    --2BGColor: #C48476;
+    --textColor: rgb(249, 240, 240);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 22px;
+    color: var(--text-color);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--mainBGColor);
+}
+
+/* Stile für Smartphone-Größen (zum Beispiel bis 480px) */
+@media screen and (min-width: 300px) {
+    #gridContainer {
+        grid-template-columns: 1fr 1fr;
+        /* Eine Spalte für Smartphone-Größen */
+        grid-template-areas:
+            "header header"
+            "menu menu"
+            "pic info1"
+            "info2 info2"
+            "notes notes"
+            "end end"
+    }
+
+    h1 {
+        font-weight: 550;
+        font-size: 30px;
+    }
+
+    h2 {
+        font-weight: 450;
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    sl-button::part(base) {
+        font-size: small;
+    }
+
+    .button {
+        width: 45%;
+        font-size: medium;
+    }
+
+    #logo {
+        width: 30%;
+    }
+
+    #profil {
+        width: 8%;
+    }
+
+    .pics {
+        position: relative;
+        width: 15%;
+        left: 5%;
+    }
+
+}
+
+@media screen and (min-width: 550px) {
+    #gridContainer {
+        grid-template-columns: 0.5fr 0.5fr;
+        /* Eine Spalte für Tablet-Größen */
+        grid-template-areas:
+            "header header"
+            "menu menu"
+            "pic info1"
+            "info2 info2"
+            "notes notes"
+            "end end"
+    }
+
+    h1 {
+        font-weight: 550;
+        font-size: 45px;
+    }
+
+    h2 {
+        font-weight: 450;
+        font-size: 40px;
+    }
+
+    p {
+        font-size: 28px;
+    }
+
+    sl-button::part(base) {
+        font-size: large;
+    }
+
+    .button {
+        width: 40%;
+        font-size: large;
+    }
+
+    #logo {
+        width: 22%;
+    }
+
+    #profil {
+        width: 6%;
+    }
+
+    .pics {
+        position: relative;
+        width: 10%;
+        left: 5%;
+    }
+}
+
+@media screen and (min-width: 1160px) {
+    #gridContainer {
+        display: grid;
+        grid-template-columns: 0.5fr 1.3fr 1.2fr;
+        grid-template-areas:
+            "header header header"
+            "menu menu menu"
+            "pic info1 notes"
+            "info2 info2 notes"
+            "end end end"
+        ;
+    }
+
+    h1 {
+        font-weight: 550;
+        font-size: 55px;
+    }
+
+    h2 {
+        font-weight: 450;
+        font-size: 40px;
+    }
+
+    p {
+        font-size: 25px;
+    }
+
+    sl-button::part(base) {
+        font-size: larger;
+    }
+
+    .button {
+        width: 20%;
+    }
+
+    #logo {
+        width: 15%;
+    }
+
+    #profil {
+        width: 4%;
+    }
+
+    .pics {
+        position: relative;
+        width: 10%;
+        left: 5%;
+    }
+}
+
+.resize-observer-overview {
+    display: grid;
+    border: solid 2px var(--sl-input-border-color);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem 2rem;
+}
+
+h1 {
+    color: white;
+    font-family: 'Miller Display';
+    padding-bottom: 1%;
+    padding-top: 3%;
+    text-align: center;
+    text-shadow: 15px 20px 20px rgba(0, 0, 0, 0.4);
+}
+
+h2 {
+    color: white;
+    font-family: 'Roc Grotesk' serif;
+}
+
+p {
+    color: white;
+    font-family: 'Roc Grotesk' serif;
+    padding-bottom: 1%;
+}
+
+#header {
+    grid-area: header;
+}
+
+#logo {
+    position: relative;
+    left: 2%;
+    top: 5%;
+    cursor: pointer;
+}
+
+#profil {
+    position: absolute;
+    left: 90%;
+    top: 2%;
+    cursor: pointer;
+}
+
+#menu {
+    grid-area: menu;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+sl-button::part(base) {
+    border: none;
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.5);
+    background-color: var(--1BGColor);
+    color: white;
+}
+
+sl-button::part(base):hover {
+    transform: scale(1.05) rotate(-1deg);
+    background-color: rgba(196, 132, 118);
+}
+
+.button {
+    position: relative;
+    margin: 1% 1%;
+}
+
+.lock {
+    pointer-events: none;
+}
+
+#pic {
+    grid-area: pic;
+    background-color: var(--1BGColor);
+}
+
+#bewerber {
+    width: 110%;
+    padding: 8% 8%;
+}
+
+#info1 {
+    grid-area: info1;
+    background-color: var(--1BGColor);
+}
+
+#info1>img {
+    width: 6%;
+    margin: 0 5%;
+    float: left;
+}
+
+#name {
+    padding: 3%;
+}
+
+#teiler {
+    margin-left: 10%;
+    margin-top: 5%;
+}
+
+#info2 {
+    grid-area: info2;
+    background-color: var(--1BGColor);
+}
+
+#info2>p {
+    margin: 0 5%;
+}
+
+#notes {
+    grid-area: notes;
+    background-color: var(--1BGColor);
+}
+
+#noteBox {
+    display: flex-box;
+    justify-content: center;
+    background-color: var(--2BGColor);
+    border-radius: 25px;
+    margin: 10% 15%;
+    padding: 5%;
+}
+
+#noteBox>p {
+    margin: auto;
+    padding: 3%;
+    color: var(--1BGColor);
+}
+
+sl-textarea::part(base) {
+    margin: auto;
+    justify-self: center;
+}
+
+#noteButton {
+    margin: auto;
+    padding: 2%;
+    justify-self: center;
+}
+
+.stars {
+    margin: auto;
+    justify-self: center;
+}
+
+#end {
+    grid-area: end;
+    background-color: var(--1BGColor);
+    display: grid;
+    justify-content: center;
+}
+
+#fave {
+    padding-top: 20%;
+    padding-bottom: 20%;
+}
+
+ul {
+    list-style: none;
+}
+
+sl-radio-group::part(base) {
+    margin: auto;
+}

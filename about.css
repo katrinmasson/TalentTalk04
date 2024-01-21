@@ -1,0 +1,253 @@
+:root {
+    --mainBGColor: rgb(202, 202, 202);
+    --1BGColor: #58565D;
+    --2BGColor: #C48476;
+    --textColor: rgb(249, 240, 240);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 22px;
+    color: var(--text-color);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--mainBGColor);
+}
+
+/* Stile für Smartphone-Größen (zum Beispiel bis 480px) */
+@media screen and (min-width: 300px) {
+    #gridContainer {
+        grid-template-columns: 1fr;
+        /* Eine Spalte für Smartphone-Größen */
+        grid-template-areas:
+            "header"
+            "menu"
+            "main"
+    }
+
+    h1 {
+        font-weight: 550;
+        font-size: 30px;
+    }
+
+    h2 {
+        font-weight: 450;
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    sl-button::part(base) {
+        font-size: small;
+    }
+
+    sl-details::part(base) {
+        font-size: small;
+    }
+
+    .button {
+        width: 45%;
+        font-size: medium;
+    }
+
+    #logo {
+        width: 30%;
+    }
+
+    #profil {
+        width: 8%;
+    }
+}
+
+@media screen and (min-width: 550px) {
+    #gridContainer {
+        grid-template-columns: 1fr;
+        /* Eine Spalte für Tablet-Größen */
+        grid-template-areas:
+            "header"
+            "menu"
+            "main"
+    }
+
+    h1 {
+        font-weight: 550;
+        font-size: 45px;
+    }
+
+    h2 {
+        font-weight: 450;
+        font-size: 40px;
+    }
+
+    p {
+        font-size: 28px;
+    }
+
+    sl-button::part(base) {
+        font-size: large;
+    }
+
+    sl-details::part(base) {
+        font-size: medium;
+    }
+
+    .button {
+        width: 40%;
+        font-size: large;
+    }
+
+    #logo {
+        width: 22%;
+    }
+
+    #profil {
+        width: 6%;
+    }
+}
+
+@media screen and (min-width: 1160px) {
+    #gridContainer {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "menu"
+            "main"
+        ;
+    }
+
+    h1 {
+        font-weight: 550;
+        font-size: 55px;
+    }
+
+    h2 {
+        font-weight: 450;
+        font-size: 40px;
+    }
+
+    p {
+        font-size: 30px;
+    }
+
+    sl-button::part(base) {
+        font-size: larger;
+    }
+
+    sl-details::part(base) {
+        font-size: larger;
+    }
+
+    .button {
+        width: 20%;
+    }
+
+    #logo {
+        width: 15%;
+    }
+
+    #profil {
+        width: 4%;
+    }
+}
+
+.resize-observer-overview {
+    display: flex;
+    border: solid 2px var(--sl-input-border-color);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem 2rem;
+}
+
+h1 {
+    color: var(--1BGColor);
+    font-family: 'Miller Display';
+    padding-bottom: 1%;
+    padding-top: 3%;
+    text-align: center;
+    text-shadow: 15px 20px 20px rgba(0, 0, 0, 0.4);
+}
+
+h2 {
+    color: var(--1BGColor);
+    font-family: 'Roc Grotesk' serif;
+    text-align: center;
+}
+
+p {
+    color: var(--1BGColor);
+    font-family: 'Roc Grotesk' serif;
+    text-align: center;
+    padding-bottom: 1%;
+}
+
+#header {
+    grid-area: header;
+}
+
+#logo {
+    position: relative;
+    left: 2%;
+    top: 5%;
+    cursor: pointer;
+}
+
+#profil {
+    position: absolute;
+    left: 90%;
+    top: 2%;
+    cursor: pointer;
+}
+
+#menu {
+    grid-area: menu;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+sl-button::part(base) {
+    border: none;
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.5);
+    background-color: var(--1BGColor);
+    color: white;
+}
+
+sl-button::part(base):hover {
+    transform: scale(1.05) rotate(-1deg);
+    background-color: rgba(196, 132, 118);
+}
+
+.button {
+    position: relative;
+    margin: 1% 1%;
+}
+
+#main {
+    grid-area: main;
+    background-color: var(--2BGColor);
+    flex-direction: column;
+    align-items: center;
+}
+
+sl-details::part(base) {
+    border-style: solid;
+    border-color: #C48476;
+    background-color: var(--1BGColor);
+    color: white;
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.5);
+}
+
+sl-details {
+    position: relative;
+    width: 80%;
+    left: 10%;
+    padding-bottom: 2%;
+}

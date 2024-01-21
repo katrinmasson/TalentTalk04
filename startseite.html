@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talent Talk</title>
+    <script src="startseite.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.11.2/cdn/themes/light.css" />
+    <link rel="stylesheet" href="startseite.css">
+</head>
+
+<body>
+
+    <div id="gridContainer">
+
+        <div id="header">
+            <sl-resize-observer>
+                <a href="startseite.html"><img id="logo" src="Bilder/Logo_TalentTalk2.png"></a>
+                <img id="profil" src="Bilder/profil.png">
+            </sl-resize-observer>
+        </div>
+
+        <div id="menu">
+            <sl-resize-observer>
+                <sl-button href="about.html" class="button" size="medium" pill>About</sl-button>
+                <sl-button href="bewerber.html" class="button" size="medium" pill>Bewerber</sl-button>
+                <sl-button href="fave.html" class="button" size="medium" pill>Favoriten</sl-button>
+                <sl-button href="termin.html" class="button" size="medium" pill>Termin</sl-button>
+            </sl-resize-observer>
+        </div>
+
+        <div id="main" class="resize-observer-overview">
+            <sl-resize-observer>
+                <h1>Herzlich Willkommen!</h1>
+                <br>
+                <p>Wir wünschen den besten Erfolg mit <strong>Talent Talk</strong>!</p>
+                <sl-carousel autoplay loop style="--scroll-hint: 15%;">
+                    <sl-carousel-item>
+                        <img src="Bilder/Screenshot1.png" />
+                    </sl-carousel-item>
+                    <sl-carousel-item>
+                        <img src="Bilder/Screenshot2.png" />
+                    </sl-carousel-item>
+                    <sl-carousel-item>
+                        <img src="Bilder/Screenshot3.png" />
+                    </sl-carousel-item>
+                </sl-carousel>
+
+                <sl-drawer label="Unsere Kontaktdaten:" class="drawer-overview">
+                    Talent Talk
+                    <br>
+                    Adresse:
+                    <br>
+                    Telefonnummer:
+                    <br>
+                    Wir sind Montag-Freitag
+                    <br>
+                    von 8:00-16:00 Uhr für sie erreichbar!
+                    <br>
+                    E-Mail:
+                    <br>
+                    Soziale Medien:
+                    <br>
+                    <sl-icon name="instagram"></sl-icon>TalentTalkInsta
+                    <br>
+                    <sl-icon name="linkedin"></sl-icon>TalentTalkIn
+                    <br>
+                    <sl-icon name="facebook"></sl-icon>TalentTalkFacebook
+                    <sl-button slot="footer" variant="primary" class="button" size="medium" pill>Close</sl-button>
+                </sl-drawer>
+
+                <sl-button class="button" size="medium" pill>Kontakt</sl-button>
+            </sl-resize-observer>
+        </div>
+    </div>
+
+    <script type="module"
+        src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.11.2/cdn/shoelace-autoloader.js"></script>
+</body>
+
+</html>

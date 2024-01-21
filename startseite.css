@@ -1,0 +1,216 @@
+:root {
+    --mainBGColor: rgb(202, 202, 202);
+    --1BGColor: #58565D;
+    --2BGColor: #C48476;
+    --textColor: rgb(249, 240, 240);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 22px;
+    color: var(--text-color);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--mainBGColor);
+}
+
+/* Stile für Smartphone-Größen (zum Beispiel bis 480px) */
+@media screen and (min-width: 300px) {
+    #gridContainer {
+        grid-template-columns: 1fr;
+        /* Eine Spalte für Smartphone-Größen */
+        grid-template-areas:
+            "header"
+            "menu"
+            "main"
+    }
+
+    h1 {
+        font-weight: 550;
+        font-size: 35px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    sl-button::part(base) {
+        font-size: small;
+    }
+
+    sl-button::part(size) {
+        size: small;
+    }
+
+    .button {
+        width: 45%;
+        font-size: medium;
+    }
+
+    #logo {
+        width: 30%;
+    }
+
+    #profil {
+        width: 8%;
+    }
+
+    sl-carousel {
+        width: 95%;
+    }
+}
+
+@media screen and (min-width: 550px) {
+    #gridContainer {
+        grid-template-columns: 1fr;
+        /* Eine Spalte für Tablet-Größen */
+        grid-template-areas:
+            "header"
+            "menu"
+            "main"
+    }
+
+    h1 {
+        font-weight: 550;
+        font-size: 45px;
+    }
+
+    p {
+        font-size: 28px;
+    }
+
+    sl-button::part(base) {
+        font-size: large;
+    }
+
+    .button {
+        width: 40%;
+        font-size: large;
+    }
+
+    #logo {
+        width: 22%;
+    }
+
+    #profil {
+        width: 6%;
+    }
+
+    sl-carousel {
+        width: 90%;
+    }
+
+}
+
+@media screen and (min-width: 1160px) {
+    #gridContainer {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "menu"
+            "main"
+        ;
+    }
+
+    h1 {
+        font-weight: 550;
+        font-size: 50px;
+    }
+
+    p {
+        font-size: 30px;
+    }
+
+    sl-button::part(base) {
+        font-size: larger;
+    }
+
+    .button {
+        width: 20%;
+    }
+
+    #logo {
+        width: 15%;
+    }
+
+    #profil {
+        width: 4%;
+    }
+
+    sl-carousel {
+        width: 80%;
+    }
+}
+
+.resize-observer-overview {
+    display: flex;
+    border: solid 2px var(--sl-input-border-color);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem 2rem;
+}
+
+h1 {
+    color: var(--1BGColor);
+    font-family: 'Miller Display';
+}
+
+p {
+    color: var(--1BGColor);
+    font-family: 'Roc Grotesk' serif;
+}
+
+#header {
+    grid-area: header;
+}
+
+#logo {
+    position: relative;
+    left: 2%;
+    top: 5%;
+    cursor: pointer;
+}
+
+#profil {
+    position: absolute;
+    left: 90%;
+    top: 2%;
+    cursor: pointer;
+}
+
+#menu {
+    grid-area: menu;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+sl-button::part(base) {
+    border: none;
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.5);
+    background-color: var(--1BGColor);
+    color: white;
+}
+
+sl-button::part(base):hover {
+    transform: scale(1.05) rotate(-1deg);
+    background-color: rgba(196, 132, 118);
+}
+
+.button {
+    position: relative;
+    margin: 1% 1%;
+}
+
+#main {
+    grid-area: main;
+    background-color: var(--2BGColor);
+    flex-direction: column;
+    align-items: center;
+}

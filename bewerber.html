@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talent Talk</title>
+    <script src="liste.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.11.2/cdn/themes/light.css" />
+    <link rel="stylesheet" href="bewerber.css">
+</head>
+
+<body>
+
+    <div id="gridContainer">
+
+        <div id="header">
+            <a href="startseite.html"><img id="logo" src="Bilder/Logo_TalentTalk2.png"></a>
+            <img id="profil" src="Bilder/profil.png">
+        </div>
+
+        <div id="menu">
+            <sl-button href="about.html" class="button" size="medium" pill>About</sl-button>
+            <sl-button href="bewerber.html" class="button" size="medium" pill>Bewerber</sl-button>
+            <sl-button href="fave.html" class="button" size="medium" pill>Favoriten</sl-button>
+            <sl-button href="termin.html" class="button" size="medium" pill>Termin</sl-button>
+        </div>
+
+        <div id="main">
+            <ul id="liste"></ul>
+        </div>
+    </div>
+
+    <script type="module"
+        src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.11.2/cdn/shoelace-autoloader.js"></script>
+</body>
+
+</html>
