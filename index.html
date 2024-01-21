@@ -8,8 +8,20 @@
     <script src="https://github.com/typicode/lowdb/blob/main/src/node.ts"></script>
     <script type="module" src="./bewerber.js" defer></script>
     <script type="module" src="./firebase.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database.js"></script>
+    <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js';
+        import { getDatabase } from 'https://www.gstatic.com/firebasejs/9.0.0/firebase-database.js';
+      
+        // Ihre Firebase-Konfiguration
+        const firebaseConfig = {
+          // ...
+        };
+      
+        // Initialisieren von Firebase
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+      </script>
+
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.11.2/cdn/themes/light.css" />
     <link rel="stylesheet" href="generalStyle.css">
